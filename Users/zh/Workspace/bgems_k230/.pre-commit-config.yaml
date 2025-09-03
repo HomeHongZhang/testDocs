@@ -1,0 +1,23 @@
+repos:
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.4
+    hooks:
+    -   id: insert-license
+        name: Add copyright license header to source code
+        description: Add copyright license header to source code.
+        files: \.(py|c|cpp|h|hpp|js|jsx|ts|tsx)$
+        args:
+          - --license-filepath
+          - LICENSE_HEADER
+          - --comment-style
+          - |
+            #
+            # 
+            #
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
